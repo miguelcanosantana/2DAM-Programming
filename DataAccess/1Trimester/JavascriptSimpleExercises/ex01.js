@@ -1,41 +1,64 @@
-//Function
-//Using process.stodout for not jumping lines
-function drawLine(height) {
-    numberCounter = 1
-    spaces = height - 1;
-    process.stdout.write("1".padStart(spaces + 1) );
-    
-    //For printing in the same line
-    for (let i = 0; i < evenCounter; i++) {
-
-        if ((i > 0) && (i < evenCounter)) {
-            numberCounter ++
-            //Casting a String
-            process.stdout.write(numberCounter.toString());
-        }
-        if (i > evenCounter - 1) {
-            numberCounter--
-            //Casting a String
-            process.stdout.write(numberCounter.toString());
-        }
-
-    }
-    evenCounter = evenCounter + 2;
-    console.log()
-}
-
-
-//Variables
+// Program Variables
 var prompt = require('prompt-sync')();
-var spaces;
-var evenCounter = 0;
-var numberCounter;
+var initialHeight;
+
 
 //Program
-var heightOriginal = prompt('Enter the height of the numeric pyramid: ');
-var height = heightOriginal;
+initialHeight = prompt('Enter the height of the numeric pyramid: ');
+printPyr(initialHeight);
 
-for (let i = 0; i < heightOriginal; i++) {
-    drawLine(height);
-    height--;
+
+//Print Pyramid function
+function printPyr(height) {
+
+    //Function Variables
+    let howMuchDraw = 1; //How much numbers to draw every line
+    let howMuchSubtract = 0; //How much spaces to subtract from being drawn
+    let numberPosCount = 1; //Count by 1 to check number position inside row
+    let numberToDraw = 0 //Number being drawn on Pyramid
+    let rowCount = 1; //Count currently row
+
+
+    //Printing
+    for (let i = 0; i < height; i++) {
+
+        //Draw Spaces before Pyramid
+        process.stdout.write(" ".padStart(height - howMuchSubtract) );
+
+        //Drawing numbers
+        for (let j = 0; j < howMuchDraw; j++) {
+
+            //If number is in the middle of the row or after, subtract 2 to make numberToDraw -1
+            if ((numberPosCount > rowCount)) {
+                numberToDraw -= 2;
+            }
+
+            //Always add 1 to numberToDraw and numberPosCount
+            numberPosCount++;
+            numberToDraw++;
+
+            //Draw the number
+            process.stdout.write(numberToDraw.toString());
+        }
+        
+
+        //Adds 1 to rowCount
+        rowCount += 1;
+
+        //Increases howMuchDraw by 2 (For drawing an Odd amount)
+        howMuchDraw += 2;
+
+        //Increases howMuchSubtract by 1
+        howMuchSubtract++;
+
+        //Number to Draw resets to 1
+        numberToDraw = 0;//Add 1 to numberPosCount
+        numberPosCount = 1;
+
+        //Jumps a line
+        console.log();
+    }
+
+
 }
+
