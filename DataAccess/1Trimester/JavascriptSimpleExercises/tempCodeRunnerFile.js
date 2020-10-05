@@ -1,1 +1,1 @@
-Math.floor((Math.random() * 210) + 140);
+charDrawn

@@ -5,11 +5,11 @@ var countries = ["Spain", "Russia", "Japan", "Australia"]
 //Program
 
 //print header
-console.log("Min   Max   Avg".padStart(60));
+console.log("Min Max Avg".padStart(71));
 
 //Print all the countries with their heights
 for (let i = 0; i < countries.length; i++) {
-    process.stdout.write((countries[i].toString() + ": ").padEnd(60));
+    process.stdout.write((countries[i].toString() + ": ").padEnd(20));
     heightMaker();
 }
 

@@ -3,9 +3,12 @@
 //Vehicle
 class Vehicle {
 
+    //Static will only run once
+    static totalKm = 0;
+
     //Attributes
-    constructor(inputKM) {
-        this.km = inputKM; //Default KM
+    constructor() {
+        this.km = 0; //Default KM
     }
 
 
@@ -15,14 +18,16 @@ class Vehicle {
     }
 
 
-    //Add kilometers to the already existing ones
-    run(kilometers){
-        let madeKm = this.km;
-        let newKm = kilometers;
+    //Add kilometers to the already existing ones and to Totals
+    run(kilom){
+        this.km += kilom;
+        Vehicle.totalKm += kilom; //Using Vehicle instead this because isn't in constructor
+    }
 
-        //Add
-        madeKm += newKm;
-        this.km = madeKm;
+
+    //Get total kilometers
+    static getTotalKm() {
+        return Vehicle.totalKm; //Using Vehicle instead this because isn't in constructor
     }
 
 
@@ -30,20 +35,7 @@ class Vehicle {
 
 
 //Car
-class Car extends Vehicle {
-
-    //Attributes
-    constructor(inputKM) {
-        super();
-        this.km = inputKM;
-    }
-
-
-    //Get Kilometers
-    getKm() {
-        return this.km;
-    }
-
+class Car extends Vehicle { //Inherits Attributes and functions from Vehicle (No need of constructor)
 
     //Do The Wheelie
     burnWheel() {
@@ -55,14 +47,7 @@ class Car extends Vehicle {
 
 
 //Bicycle
-class Bicycle extends Vehicle {
-
-    //Attributes
-    constructor(inputKM) {
-        super();
-        this.km = inputKM;
-    }
-
+class Bicycle extends Vehicle { //Inherits Attributes and functions from Vehicle (No need of constructor)
 
     //Do The Wheelie
     doTheWheelie() {
