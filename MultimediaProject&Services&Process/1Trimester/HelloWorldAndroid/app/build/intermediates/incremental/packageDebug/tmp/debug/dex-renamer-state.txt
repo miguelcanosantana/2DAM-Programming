@@ -1,0 +1,4 @@
+#Tue Oct 06 11:07:54 CEST 2020
+base.0=/home/tide/Mega/Git/2DAM-Programming/MultimediaProject&Services&Process/1Trimester/HelloWorldAndroid/app/build/intermediates/dex/debug/mergeDexDebug/classes.dex
+path.0=classes.dex
+renamed.0=classes.dex

@@ -2,7 +2,7 @@
 
 //Vehicle
 class Vehicle {
-
+    
     //Static will only run once
     static totalKm = 0;
 
