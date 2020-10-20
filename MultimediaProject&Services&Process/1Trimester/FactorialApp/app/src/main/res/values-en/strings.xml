@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="mensaje">Welcome to the app that calculates the factorial of a number. Enter a positive Integeer</string>
+    <string name="boton">Push me</string>
+    <string name="botonDespuesPush">Made Click!</string>
+</resources>

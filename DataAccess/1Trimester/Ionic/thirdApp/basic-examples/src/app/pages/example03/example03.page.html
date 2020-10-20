@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Events - Click</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="ion-padding">
+    <div class="buttons">
+      <ion-button color="medium" (click)="resetValue()">Reset</ion-button>
+    </div>
+    
+    <!-- n variable inside typescript -->
+    <h1>{{ n }}</h1>
+
+    <div class="buttons">
+      <ion-button color="dark" (click)="decreaseValue()">-</ion-button>
+      <ion-button color="tertiary" (click)="newRandomValue()">Random</ion-button>
+      <ion-button color="dark" (click)="increaseValue()">+</ion-button>
+    </div>
+    
+
+
+  </div>
+</ion-content>

@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Interpolations</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="ion-padding">
+    <!-- {{}} (Interpolation) is used for calculate or display existing variables (From the typescript) -->
+    <p>x value is {{ x }}</p>
+    <p>y value is {{ y }}</p>
+    <p>x + y value is {{ x + y }}</p>
+    <p>word value is <b>"{{ word }}"</b></p>
+    <!-- | is for using filters and printing complex things correctly, in this case is json -->
+    <p>person value is {{ person | json }}</p>
+    <!-- Also can be done manually accessing objetct's attributes -->
+    <p>person name is {{ person.name }}</p>
+    <p>person job is {{ person.job }}</p>
+    <!-- Filters can have parameters -->
+    <p>person salary is {{ person.salary | currency:'€' }}</p>
+    
+  </div>
+</ion-content>

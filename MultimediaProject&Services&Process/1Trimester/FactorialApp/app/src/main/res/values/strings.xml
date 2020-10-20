@@ -1,0 +1,7 @@
+<resources>
+
+    <!-- -->
+    <string name="mensaje">Bienvenid@ a la app que calcula el factorial de un número. Introduce un valor entero positivo.</string>
+    <string name="boton">Púlsame</string>
+    <string name="botonDespuesPush">Hice Click!</string>
+</resources>
