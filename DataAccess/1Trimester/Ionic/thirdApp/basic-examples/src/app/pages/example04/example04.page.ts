@@ -7,9 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Example04Page implements OnInit {
 
+  word: string;
+
   constructor() { }
 
   ngOnInit() {
+    this.word = "";
+  }
+
+  //Clear the text
+  clearText() {
+    this.word = "";
   }
 
 }

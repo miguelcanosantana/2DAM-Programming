@@ -1,9 +1,39 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>example06</ion-title>
+    <ion-title>Add elements to Array</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <div class="ion-padding">
 
+    <ion-item>
+      <ion-label>Write Number: </ion-label>
+      <ion-input (keyup.enter)="insertNumber()" [(ngModel)]="inputNumber" type="text" placeholder=""></ion-input>
+    </ion-item>
+    
+    <br>
+
+    <b>Numbers:</b>
+    <!-- For travelling the array numbers and getting each element -->
+    <p *ngFor="let n of numbers">
+      {{ n }}
+    </p>
+
+    <br>
+
+    <ion-item>
+      <ion-label>Write Fruit: </ion-label>
+      <ion-input (keyup.enter)="insertFruit()" [(ngModel)]="inputFruit" type="text" placeholder=""></ion-input>
+    </ion-item>
+
+    <br>
+
+    <b>Fruits:</b>
+    <span *ngFor="let f of fruits">
+      {{ f }}
+    </span>
+    
+
+  </div>
 </ion-content>

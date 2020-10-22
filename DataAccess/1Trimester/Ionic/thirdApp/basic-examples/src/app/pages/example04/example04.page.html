@@ -1,9 +1,20 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>example04</ion-title>
+    <ion-title>Text Input</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <div class="ion-padding">
 
+    <!--            ()   p -> TS              -->
+    <!--            []   p <- TS              -->
+    <!--           [()]  p <-> TS             -->
+    <ion-input [(ngModel)] = "word" type="text" placeholder="Write here"></ion-input>
+    <ion-button color="dark" (click)="clearText()" expand="block">Clear Text</ion-button>
+    <br>
+    <p>The word in uppercase is: </p>
+    {{ word | uppercase}}
+
+  </div>
 </ion-content>
