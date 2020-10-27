@@ -10,7 +10,7 @@ import { shoppingCart } from 'src/app/model/shopping-cart';
 export class Exercise03Page implements OnInit {
 
   totalPrice: number = 0;
-  newArticle: Article;
+
   newName: string;
   newPrice: number;
   newQuantity: number;
@@ -33,12 +33,19 @@ export class Exercise03Page implements OnInit {
 
   //Add new article to the list pushing inside Array
   addArticle() {
-    //newArticle: Article;
-    this.newArticle.item = this.newName;
-    this.newArticle.price = this.newPrice;
-    this.newArticle.quantity = this.newQuantity;
 
-    this.articles.push(this.newArticle);
+    //Need to define the new Article JSON
+    let newArticle: Article = {
+      item: "",
+      price: 0,
+      quantity: 0,
+    }
+
+    newArticle.item = this.newName;
+    newArticle.price = this.newPrice;
+    newArticle.quantity = this.newQuantity;
+
+    this.articles.push(newArticle);
 
     this.calculateTotal();
   }

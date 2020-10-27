@@ -10,9 +10,9 @@
     <h1>Shopping Cart</h1>
 
     <h4>New item</h4>
-    <ion-input (ngModel)="newName" type="text" placeholder="Article Name..."></ion-input>
-    <ion-input (ngModel)="newPrice" type="text" placeholder="Article Price..."></ion-input>
-    <ion-input (ngModel)="newQuantity" type="text" placeholder="Article Quantity..."></ion-input>
+    <ion-input [(ngModel)]="newName" type="text" placeholder="Article Name..."></ion-input>
+    <ion-input [(ngModel)]="newPrice" type="text" placeholder="Article Price..."></ion-input>
+    <ion-input [(ngModel)]="newQuantity" type="text" placeholder="Article Quantity..."></ion-input>
     <ion-button color="dark" (click)="addArticle()" expand="block">
       Add to Cart
     </ion-button>
