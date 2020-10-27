@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Structural Directive</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="ion-padding">
+
+    <h1>Temperature: {{ temperature }}</h1>
+
+    <div class="buttons">
+      <ion-button color="dark" (click)="changeValue(-10)">-10</ion-button>
+      <ion-button color="dark" (click)="changeValue(-1)">-</ion-button>
+      <ion-button color="dark" (click)="changeValue(+1)">+</ion-button>
+      <ion-button color="dark" (click)="changeValue(+10)">+10</ion-button>
+    </div>
+
+    <!-- If a condition is reached, will show the things inside this container -->
+    <ng-container *ngIf="temperature >= 40">
+      <div class="text"> <p>So hot!</p>
+        <img src="https://cdn.pixabay.com/photo/2017/01/31/19/05/blazing-2026487__340.png" alt="hot">
+      </div>
+    </ng-container>
+
+    <ng-container *ngIf="temperature <= 0">
+      <div class="text"><p>So cold!</p>
+        <img src="https://pixy.org/src/21/218209.png" alt="cold">
+      </div>
+    </ng-container>
+
+
+
+
+  </div>
+</ion-content>

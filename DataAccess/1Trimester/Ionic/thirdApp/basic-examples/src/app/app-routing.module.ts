@@ -39,6 +39,22 @@ const routes: Routes = [
     path: 'example07',
     loadChildren: () => import('./pages/example07/example07.module').then( m => m.Example07PageModule)
   },
+  {
+    path: 'example08',
+    loadChildren: () => import('./pages/example08/example08.module').then( m => m.Example08PageModule)
+  },
+  {
+    path: 'exercises',
+    loadChildren: () => import('./pages/exercises/exercises.module').then( m => m.ExercisesPageModule)
+  },
+  {
+    path: 'exercise02',
+    loadChildren: () => import('./pages/exercise02/exercise02.module').then( m => m.Exercise02PageModule)
+  },
+  {
+    path: 'exercise03',
+    loadChildren: () => import('./pages/exercise03/exercise03.module').then( m => m.Exercise03PageModule)
+  },
 ];
 
 @NgModule({

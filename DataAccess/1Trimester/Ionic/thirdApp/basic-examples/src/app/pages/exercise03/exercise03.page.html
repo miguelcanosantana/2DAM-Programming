@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Shopping Cart</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="ion-padding centered">
+
+    <h1>Shopping Cart</h1>
+
+    <h4>New item</h4>
+    <ion-input (ngModel)="newName" type="text" placeholder="Article Name..."></ion-input>
+    <ion-input (ngModel)="newPrice" type="text" placeholder="Article Price..."></ion-input>
+    <ion-input (ngModel)="newQuantity" type="text" placeholder="Article Quantity..."></ion-input>
+    <ion-button color="dark" (click)="addArticle()" expand="block">
+      Add to Cart
+    </ion-button>
+
+    <ion-list>
+      <ion-item *ngFor="let article of articles">
+        <ion-label class="centered">
+          <h2>{{ article.item }}</h2>
+          <h3>Individual Price: {{ article.price | currency }}</h3>
+          <h3>Units: {{ article.quantity }}</h3>
+          <h3>All Price: {{ article.price * article.quantity | currency }}</h3>
+        </ion-label>
+
+      </ion-item>
+
+      <h4>Total Price: {{ totalPrice | currency }}</h4>
+
+    </ion-list>
+
+  </div>
+</ion-content>

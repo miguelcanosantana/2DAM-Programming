@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Converter</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="ion-padding">
+    <ion-label>Inches</ion-label>
+    <ion-input (ionInput)="convertFromInch($event)" [(ngModel)]="inches" type="text" placeholder="Input something..."></ion-input>
+    <ion-label>Centimeters</ion-label>
+    <ion-input (ionInput)="convertFromCent($event)" [(ngModel)]="cents" type="text" placeholder="Input something..."></ion-input>
+    <ion-label>Meters</ion-label>
+    <ion-input (ionInput)="convertFromMeter($event)" [(ngModel)]="meters" type="text" placeholder="Input something..."></ion-input>
+  </div>
+</ion-content>
