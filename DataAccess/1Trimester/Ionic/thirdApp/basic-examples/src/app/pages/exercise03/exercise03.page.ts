@@ -9,7 +9,7 @@ import { shoppingCart } from 'src/app/model/shopping-cart';
 })
 export class Exercise03Page implements OnInit {
 
-  totalPrice: number = 0;
+  totalPrice: number;
 
   newName: string;
   newPrice: number;
@@ -50,8 +50,12 @@ export class Exercise03Page implements OnInit {
     this.calculateTotal();
   }
 
-  //Calculate on init total price of total articles
+  //Calculate total price of total articles
   calculateTotal(){
+
+    //Resets to 0 every new calc
+    this.totalPrice = 0
+
     for (let i = 0; i < this.articles.length; i++) {
       let tempArtic: Article = this.articles[i];
       let tempPrice: number = (tempArtic.price * tempArtic.quantity);
