@@ -16,21 +16,29 @@ export class Exercise02Page implements OnInit {
   ngOnInit() {
   }
 
-  convertFromInch() {
-    this.cents = this.inches * 2.54;
-    this.meters = this.cents / 100; 
-  }
 
-  convertFromCent() {
-    this.inches = this.cents / 2.54;
-    this.meters = this.cents / 100; 
-  }
+  //Given a type sets other types values
+  convert(fromType) {
 
-  convertFromMeter() {
-    this.cents = this.meters * 100;
-    this.inches = this.cents / 2.54;
-  }
+    if (fromType == "inch") {
+      this.cents = this.inches * 2.54;
+      this.meters = this.cents / 100;
 
+    }
+
+    if (fromType == "cm") {
+      this.inches = this.cents / 2.54;
+      this.meters = this.cents / 100; 
+      
+    }
+
+    if (fromType == "m") {
+      this.cents = this.meters * 100;
+      this.inches = this.cents / 2.54;
+      
+    }
+
+  }
   
 
 }

@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Exercise 1</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-button color="dark" (click)="showName('miguel')" expand="full">
+    Show the name
+  </ion-button>
+
+  <ion-button color="dark" (click)="cleanName()" expand="full">
+    Clear Screen
+  </ion-button>
+
+  <h1 text-center>{{ name }}</h1>
+</ion-content>

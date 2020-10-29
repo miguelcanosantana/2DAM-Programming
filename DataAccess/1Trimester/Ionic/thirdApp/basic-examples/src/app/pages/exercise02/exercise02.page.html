@@ -6,11 +6,21 @@
 
 <ion-content>
   <div class="ion-padding">
-    <ion-label>Inches</ion-label>
-    <ion-input (ionInput)="convertFromInch($event)" [(ngModel)]="inches" type="text" placeholder="Input something..."></ion-input>
-    <ion-label>Centimeters</ion-label>
-    <ion-input (ionInput)="convertFromCent($event)" [(ngModel)]="cents" type="text" placeholder="Input something..."></ion-input>
-    <ion-label>Meters</ion-label>
-    <ion-input (ionInput)="convertFromMeter($event)" [(ngModel)]="meters" type="text" placeholder="Input something..."></ion-input>
+
+    <ion-item>
+      <ion-label color="dark" position="floating">Inches</ion-label>
+      <ion-input color="dark" type="number" (keyup)="convert('inch')" (ionInput)="convert('inch')" clearInput [(ngModel)]="inches"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="dark" position="floating">Centimeters</ion-label>
+      <ion-input color="dark" type="number" (keyup)="convert('cm')" (ionInput)="convert('cm')" clearInput [(ngModel)]="cents"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="dark" position="floating">Meters</ion-label>
+      <ion-input color="dark" type="number" (keyup)="convert('m')" (ionInput)="convert('m')" clearInput [(ngModel)]="meters"></ion-input>
+    </ion-item>
+
   </div>
 </ion-content>

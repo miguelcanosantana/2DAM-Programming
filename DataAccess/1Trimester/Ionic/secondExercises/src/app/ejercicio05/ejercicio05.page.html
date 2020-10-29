@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="/home"></ion-back-button>
+      </ion-buttons>
+    <ion-title>Ejercicio 5</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-item>
+    <ion-label color="dark" position="floating">Min Value</ion-label>
+    <ion-input color="dark" clearInput [(ngModel)]="a"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label color="dark" position="floating">Max value</ion-label>
+    <ion-input color="dark" clearInput [(ngModel)]="b"></ion-input>
+  </ion-item>
+
+  <ion-button color="dark" (click)="generateNumber()" size="large" expand="full">
+    Generate number
+  </ion-button>
+      
+  <h1 color="dark" text-center>{{ randomNumber }}</h1>
+</ion-content>
