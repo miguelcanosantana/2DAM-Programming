@@ -1,0 +1,52 @@
+#efecto1 { background-color: black;
+           color: seashell;
+           font-size: 6em;
+           text-align: center;
+           margin-left: 90px;
+           margin-right: 90px;
+           text-shadow: 0px 0px 20px #00ff37,  
+                        0px 0px 20px #00ff37,  
+                        0px 0px 20px #00ff37,  
+                        0px 0px 20px #00ff37;
+}
+
+#efecto2 { background-color: #885cb1;
+           color: seashell;
+           font-size: 6em;
+           text-align: center;
+           margin-left: 90px;
+           margin-right: 90px;
+           text-shadow: 1px 1px 0px #9fbfce,
+                        2px 2px 0px #7a9cac,
+                        3px 3px 0px #5c7885,
+                        4px 4px 0px #182329;
+           box-shadow: 4px 4px 4px #383838cb ;
+}
+
+#efecto3 { background-image: url("background1.jpg");
+           background-position-y: -2255px;
+           color: seashell;
+           font-size: 8em;
+           font-weight: bolder;
+           text-align: center;
+           -webkit-background-clip: text;
+           -webkit-text-fill-color: transparent;
+}
+
+#efecto4 { background: rgba(252,236,252,1);
+           background: rgba(255,124,216,1);
+           background: -moz-linear-gradient(left, rgba(255,124,216,1) 0%, rgba(253,137,215,1) 17%, rgba(251,166,225,1) 49%, rgba(252,236,252,1) 100%);
+           background: -webkit-gradient(left top, right top, color-stop(0%, rgba(255,124,216,1)), color-stop(17%, rgba(253,137,215,1)), color-stop(49%, rgba(251,166,225,1)), color-stop(100%, rgba(252,236,252,1)));
+           background: -webkit-linear-gradient(left, rgba(255,124,216,1) 0%, rgba(253,137,215,1) 17%, rgba(251,166,225,1) 49%, rgba(252,236,252,1) 100%);
+           background: -o-linear-gradient(left, rgba(255,124,216,1) 0%, rgba(253,137,215,1) 17%, rgba(251,166,225,1) 49%, rgba(252,236,252,1) 100%);
+           background: -ms-linear-gradient(left, rgba(255,124,216,1) 0%, rgba(253,137,215,1) 17%, rgba(251,166,225,1) 49%, rgba(252,236,252,1) 100%);
+           background: linear-gradient(to right, rgba(255,124,216,1) 0%, rgba(253,137,215,1) 17%, rgba(251,166,225,1) 49%, rgba(252,236,252,1) 100%);
+           filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff7cd8', endColorstr='#fcecfc', GradientType=1 );
+   
+           color: seashell;
+           font-size: 7em;
+           font-weight: bolder;
+           text-align: center;
+           -webkit-background-clip: text;
+           -webkit-text-fill-color: transparent;
+}

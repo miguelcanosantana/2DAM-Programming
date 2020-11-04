@@ -1,0 +1,48 @@
+/* ---------------------------------------------- */
+/* COMENTAR Y DESCOMENTAR PARA VER FUNCIONAMIENTO */
+/* ---------------------------------------------- */
+
+h1 + h2 {
+    background-color: rgb(168, 190, 87);
+}
+
+h3 ~ h4 {
+    background-color: rgb(168, 190, 87);
+}
+
+/* ---------------------------------------------- */
+
+/* Se pondrían en azul todos los elementos que tengan clase */
+[class] {
+    color: rgb(14, 152, 207);
+}
+
+/* Se pondrían en verde todos los elementos que contengan prueba */
+[class~="prueba"] {
+    color: rgb(37, 207, 14);
+}
+
+/* Se pondrían en rojo todos los elementos que contengan "l" en la clase */
+[class*="l"] {
+    color: rgb(207, 14, 78);
+}
+
+/* Se pondrían en morado todos los elementos que contengan y terminen en "m" en el href */
+[href$="m"] {
+    background-color: rgb(159, 100, 237);
+}
+
+/* Se pondrían en amarillo todos los elementos que contengan y empiecen en "m" en el href */
+[href^="h"] {
+    background-color: rgb(255, 251, 14);
+}
+
+/* ---------------------------------------------- */
+
+/* Colorea el primer hijo dentro de una p del tipo em */
+p em:first-child {
+    background-color: cyan;
+}
+
+/* ---------------------------------------------- */
+

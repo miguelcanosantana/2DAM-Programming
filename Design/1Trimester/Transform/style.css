@@ -1,0 +1,40 @@
+div {
+    width: 100px;
+    height: 200px;
+    background-color: black;
+    margin: 20px;
+}
+
+#norot {
+    background-color: cornflowerblue;
+    position: absolute;
+}
+
+#rot1 {
+    transform: rotate(20deg);
+}
+
+#rot2 {
+    transform: rotateY(60deg);
+}
+
+#skew1 {
+    transform: skew(30deg, 30deg);
+}
+
+#scale {
+    transform: scale(0.2, 0.6);
+}
+
+#translate {
+    transform: translate(2, 3);
+}
+
+#perspective{
+    width: 300px;
+    height: 300px;
+    perspective: 600px;
+
+}
+
+

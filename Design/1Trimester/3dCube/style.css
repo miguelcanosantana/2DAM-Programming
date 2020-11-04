@@ -1,0 +1,99 @@
+body { background-color: rgb(36, 36, 36);
+}
+
+.container {
+  width: 200px;
+  height: 200px;
+  margin: 100px auto;
+  position: relative;
+  perspective: 400px;
+  perspective-origin: 50% 50%;
+}
+
+
+.cube {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  transform-origin: center;
+}
+
+/* Use the transform inside to rotate the cubes */
+#cube1 {
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+}
+
+#cube2 {
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+}
+
+#cube3 {
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+}
+
+/* Flip Horizontally the content */
+.flipHorizontal {
+  transform: scale(-1,1);
+}
+
+/* Select all child divs (faces) from cube class */
+.cube > div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+/* 1 */
+.cube .back {
+  background: rgba(255, 255, 255, 0.75);
+  transform: rotateX(0deg) translateZ(-100px);
+}
+
+/* 2 */
+.cube .left {
+  background: rgba(255, 217, 0, 0.75);
+  transform: rotateY(90deg) translateZ(-100px);
+}
+
+/* 3 */
+.cube .bottom {
+  background: rgba(0, 255, 136, 0.75);
+  transform: rotateX(90deg) translateZ(-100px);
+}
+
+/* 4 */
+.cube .front {
+  background: rgba(47, 0, 255, 0.75);
+  transform: rotateX(0deg) translateZ(100px);
+}
+
+/* 5 */
+.cube .right {
+  background: rgba(255, 0, 149, 0.75);
+  transform: rotateY(90deg) translateZ(100px);
+}
+
+/* 6 */
+.cube .top {
+  background: rgba(255, 100, 79, 0.75);
+  transform: rotateX(90deg) translateZ(100px);
+}
+
+/* Select all child ps from div .cube class */
+.cube > div p {
+    width: 60px;
+    height: 60px;
+    color: rgb(255, 255, 255);
+    font-size: 60px;
+    margin-left: 70px;
+    margin-top: 70px;
+    text-align: center;
+    background-color: rgb(36, 36, 36);
+}
+
+/* Select all child imgs from div .cube class */
+.cube > div img {
+    width: 100%;
+    height: 100%;
+}
