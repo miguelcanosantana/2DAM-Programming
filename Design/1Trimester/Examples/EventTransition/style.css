@@ -1,0 +1,16 @@
+#box {
+    width: 100px;
+    height: 100px;
+    background-color: cornflowerblue;
+    position: relative;
+    transition: all 4s;
+}
+
+#box.transition {
+    width: 200px;
+}
+
+#box.transitionEnd {
+    width: 300px;
+    background-color: yellow;
+}

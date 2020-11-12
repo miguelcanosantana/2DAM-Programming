@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Random Number</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-item>
+    <ion-label color="dark" position="floating">Min Value</ion-label>
+    <ion-input color="dark" type="number" clearInput [(ngModel)]="a"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label color="dark" position="floating">Max value</ion-label>
+    <ion-input color="dark" type="number" clearInput [(ngModel)]="b"></ion-input>
+  </ion-item>
+
+  <div id="number">
+    <ion-button id="number" color="dark" (click)="changeDisplay()">
+      {{ randomNumber }}
+    </ion-button>
+  </div>
+  
+  <!-- Disable button if min number is bigger than max number -->
+  <ng-container *ngIf="!(a>b)">
+    <ion-button color="dark" (click)="generateNumber()" size="large" expand="full">
+      Generate number
+    </ion-button>
+  </ng-container>
+
+  <!-- Enable placeholder button if min number is bigger than max number -->
+  <ng-container *ngIf="(a>b)">
+    <ion-button color="medium" size="large" expand="full">
+      Check the numbers
+    </ion-button>
+  </ng-container>
+      
+
+</ion-content>
