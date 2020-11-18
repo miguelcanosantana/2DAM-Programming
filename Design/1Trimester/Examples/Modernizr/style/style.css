@@ -1,0 +1,27 @@
+body {
+    background-color: rgb(71, 85, 129);
+}
+
+/* No reflections */
+.no-cssreflections h1 {
+    color: rgb(255, 0, 119);
+}
+
+.no-cssreflections #fallbackReflection {
+    transform: scaleY(-1);
+    margin-top: -10px;
+}
+
+/* Reflections */
+.cssreflections #fallbackReflection {
+    display: none;
+}
+
+.cssreflections h1 {
+    color: rgb(0, 255, 128);
+}
+
+
+img {
+    -webkit-box-reflect: below ;
+}

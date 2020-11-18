@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		
+		body{
+			background-color: #222;
+			color:white;
+
+		}
+    .elemento{
+      
+      
+			padding: 20px;
+			border: 2px solid #888;
+			border-radius: 10px;
+			background-color: #F2C14E;
+			text-align: center;
+			font-size: 1.5em;
+		}
+		.elemento:nth-child(1){
+			grid-column: 2/3;
+		}
+	  
+		.elemento:nth-child(7){
+			grid-row: 4/2;
+		}
+	  
+	  .elemento:nth-child(8){
+			grid-row: 3/3;
+		} 
+	  
+		#contenedor{
+			padding: 5px;
+			width: 700px;
+			height: 500px;
+			margin: 20px auto;
+			border: 5px dashed #777;
+			border-radius: 10px;
+
+			display: grid;
+			/*grid-template-columns: 1fr 1fr 1fr 1fr;
+			grid-template-rows: 6em 1fr 2fr;*/
+			grid-template:  100px 100px 100px / 100px 100px 100px 100px;
+			grid-gap: 0.5em .5em;
+			grid-auto-flow: row ;
+			justify-items: stretch;
+			align-items: stretch;
+			justify-content: space-evenly;
+			align-content: space-evenly;
+
+			
+
+		}
+		
+		
+
+	</style>
+</head>
+<body>
+	<h1>Ejemplo de Grid-Layout</h1>
+
+	<div id="contenedor">
+		
+		<div class="elemento "><p>1</p></div>
+		<div class="elemento "><p>2</p></div>
+		<div class="elemento "><p>3</p></div>
+		<div class="elemento "><p>4</p></div>
+		<div class="elemento "><p>5</p></div>
+		<div class="elemento "><p>6</p></div>
+		<div class="elemento "><p>7</p></div>
+		<div class="elemento "><p>8</p></div>
+		<div class="elemento "><p>9</p></div>
+		<div class="elemento "><p>10</p></div>
+		
+	</div>
+
+</body>
+</html>

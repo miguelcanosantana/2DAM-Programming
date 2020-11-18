@@ -18,9 +18,23 @@
   
   <ion-list>
     <ion-item *ngFor="let t of tasks">
+
       <ion-label>{{t.title}}</ion-label>
-      <ion-icon name="close-circle-outline"></ion-icon>
+
+      <!-- Edit Task -->
+      <ion-button color="dark" (click)="goEditTask(t.id)" fill="clear">
+        <ion-icon name="create"></ion-icon>
+      </ion-button>
+
+      <!-- Delete Task -->
+      <ion-button color="dark" (click)="presentAlertConfirm(t)" fill="clear">
+        <ion-icon name="close-circle-outline"></ion-icon>
+      </ion-button>
+
     </ion-item>
   </ion-list>
+
+  {{ tasks | json}}
+
 
 </ion-content>

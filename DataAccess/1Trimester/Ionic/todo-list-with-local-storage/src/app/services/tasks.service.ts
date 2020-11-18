@@ -10,7 +10,7 @@ export class TasksService {
   tasks: Task[] = [];
 
   //Taks ids counter
-  taskCounter: number = 4;
+  taskCounter: number = 5;
 
   constructor() { 
     //Initialize with jsons tasks list
@@ -22,8 +22,8 @@ export class TasksService {
       },
       {
         id: 1,
-        title: 'Arrange the desktop',
-        description: 'Empty all the folders and rearrange them'
+        title: 'Arrange your mind',
+        description: 'Empty all bad feelings and dance'
       },
       {
         id: 2,
@@ -47,7 +47,7 @@ export class TasksService {
 
 
   //Return the tasks of the service
-  public getTask(): Task[] {
+  public getTasks(): Task[] {
     return this.tasks;
   }
 
@@ -56,6 +56,15 @@ export class TasksService {
     t.id = this.taskCounter++;
     this.tasks.push(t);
   
+  }
+
+  //Delete a Task given it's id
+  public deleteTask(givenId: number) {
+
+    //Task list = Filter all elements that their id is diferent from givenId
+    console.log (this.tasks.filter(t => t.id == givenId));
+    this.tasks = this.tasks.filter(t => t.id != givenId);
+
   }
 
 

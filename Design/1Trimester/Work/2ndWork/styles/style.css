@@ -1,0 +1,28 @@
+.buttonGroup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button {
+    font-size: 30px;
+    background-color: rgb(143, 143, 143);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    border-radius: 15px;
+    padding: 30px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.but1 {
+    background: rgba(202,48,120,1);
+    background: -moz-linear-gradient(left, rgba(202,48,120,1) 0%, rgba(68,208,209,0.75) 100%);
+    background: -webkit-linear-gradient(left, rgba(202,48,120,1) 0%, rgba(68,208,209,0.75) 100%);
+    background: linear-gradient(to right, rgba(202,48,120,1) 0%, rgba(68,208,209,0.75) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ca3078', endColorstr='#44d0d1', GradientType=1 );
+}
+
+.but2 {
+    background-color: #E78331;
+}
