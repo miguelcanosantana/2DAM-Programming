@@ -1,6 +1,6 @@
 /*________________Animations________________*/
 .animation {
-    animation: anim 6s linear 0s infinite normal forwards;
+    animation: anim 36s linear 0s infinite normal forwards;
 }
 
 @keyframes anim {
@@ -11,24 +11,24 @@
         
     }
 
-    10% {
+    4% {
         opacity: 100;
     }
     
 
-    25% {
+    6% {
         transform:scale(1.1,1.1);
     }
 
-    50% {
+    8% {
         transform:scale(1.2,1.2) rotateZ(5deg);
     }
 
-    75% {
+    12% {
         opacity: 100;
     }
 
-    100% {
+    16.6% {
         opacity: 0;
         transform:scale(1.2,1.2) rotateZ(5deg);
 

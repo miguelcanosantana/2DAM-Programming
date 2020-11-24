@@ -1,0 +1,13 @@
+{
+  "appId": "com.miguel.storageTestIonic",
+  "appName": "testStorage",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0
+    }
+  },
+  "cordova": {}
+}

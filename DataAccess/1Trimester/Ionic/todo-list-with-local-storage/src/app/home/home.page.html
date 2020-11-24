@@ -17,7 +17,8 @@
 <ion-content class="ion-padding">
   
   <ion-list>
-    <ion-item *ngFor="let t of tasks">
+    <!-- Get Tasks directly from TaskService Reference inside home-page.ts -->
+    <ion-item *ngFor="let t of tasksService.getTasks()">
 
       <ion-label>{{t.title}}</ion-label>
 
@@ -34,7 +35,7 @@
     </ion-item>
   </ion-list>
 
-  {{ tasks | json}}
+  {{ tasksService.getTasks() | json}}
 
 
 </ion-content>

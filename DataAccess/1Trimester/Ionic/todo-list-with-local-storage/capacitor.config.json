@@ -1,6 +1,6 @@
 {
-  "appId": "io.ionic.starter",
-  "appName": "todo-list-with-local-storage",
+  "appId": "io.miguel.notas",
+  "appName": "Notas",
   "bundledWebRuntime": false,
   "npmClient": "npm",
   "webDir": "www",

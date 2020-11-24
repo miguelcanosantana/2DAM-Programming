@@ -11,9 +11,6 @@ import { TasksService } from '../services/tasks.service';
 })
 export class HomePage {
 
-  //An array of tasks
-  tasks: Task[] = []
-
 
   //It can also be defined outside constructor
   constructor(
@@ -26,9 +23,7 @@ export class HomePage {
   ) {}
 
 
-  //Import tasks from task.service.ts
   ngOnInit(){
-    this.tasks = this.tasksService.getTasks()
   }
 
 
@@ -42,8 +37,6 @@ export class HomePage {
   //Import delete from task.service.ts
   deleteTask(id: number) {
     this.tasksService.deleteTask(id);
-    //Update the task array and get the service's one
-    this.tasks = this.tasksService.getTasks();
   }
 
 

@@ -51,6 +51,14 @@ export class TasksService {
     return this.tasks;
   }
 
+  //Get a Task from the id 
+  public getTask(id: number): Task {
+    //Need to specify 0 because need to return an array of 1 task at index 0
+    //Use ... inside {} to create a copy and not use a reference
+    //for fixing the problem where you go back and note is saved
+    return {...this.tasks.filter(t => t.id === id)[0]};
+  }
+
   //Service for saving a task inside tasks Array
   public saveTask(t: Task) {
     t.id = this.taskCounter++;

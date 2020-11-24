@@ -1,0 +1,14 @@
+{
+  "appId": "com.miguel.storageTestIonic",
+  "appName": "testStorage",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www",
+  "linuxAndroidStudioPath": "/home/tide/Portables/android-studio/bin/studio.sh",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0
+    }
+  },
+  "cordova": {}
+}
