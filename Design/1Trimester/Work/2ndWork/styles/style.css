@@ -2,6 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 400px;
 }
 
 .button {
@@ -10,9 +11,13 @@
     color: rgb(255, 255, 255);
     text-align: center;
     border-radius: 15px;
-    padding: 30px;
-    padding-left: 50px;
-    padding-right: 50px;
+    padding: 20px;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.wrapper{
+    position: relative;
 }
 
 .but1 {
@@ -21,8 +26,92 @@
     background: -webkit-linear-gradient(left, rgba(202,48,120,1) 0%, rgba(68,208,209,0.75) 100%);
     background: linear-gradient(to right, rgba(202,48,120,1) 0%, rgba(68,208,209,0.75) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ca3078', endColorstr='#44d0d1', GradientType=1 );
+    position: absolute;
+}
+
+@keyframes pulse {
+    from {
+        border: 5px solid rgba(202,48,120,1);
+        transform: scale(0, 0);
+    }
+    to {
+        border: 5px solid rgba(0, 0, 0, 0);
+        transform: scale(1.75, 1.75);
+    }
+}
+
+@keyframes remark {
+    from {
+        border: 5px solid rgba(0, 0, 0, 0);
+        transform: scale(1.1, 1.2);
+    }
+    to {
+        border: 5px solid rgba(202,48,120,1);
+        transform: scale(1.1, 1.2);
+    }
+}
+
+.but1ghost {
+    color: #00000000;
+    background-color: #00000000;
+    border: 5px solid rgba(202,48,120,1);
+    padding-bottom: 10px;
+    padding-left: 70px;
+    margin-left: 10px;
+    position: absolute;
+
+    animation-name: pulse;
+    animation-timing-function: cubic-bezier(.18,.69,.35,.92);
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    
+
+}
+
+.but1ghost:hover {
+    animation-name: remark;
+    animation-timing-function: cubic-bezier(.18,.69,.35,.92);
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
 }
 
 .but2 {
     background-color: #E78331;
+    position: relative;
+    margin-left: 305px;
+    padding: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.foldable {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    padding: 20px;
+    padding-left: 12px;
+    padding-right: 10px;
+    font-weight: bolder;
+    border-radius: 30px 50px 50px 30px;
+    background-color: rgb(63, 198, 189);
+    transform-style: preserve-3d;
+    transform-origin: 0px;
+    transform: rotateY(90deg);
+}
+
+.but2:hover .foldable {
+    animation-name: unfold;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+
+}
+
+@keyframes unfold {
+    from {
+        transform: rotateY(90deg);
+        
+    }
+    to {
+        transform: rotateY(0deg);
+    }
 }

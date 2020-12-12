@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>example-ngstyle</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <p style="color: blue"> Color of the text is blue</p>
+  <p [ngStyle]="{'color' : 'blue'}"> Color of the text is blue</p> <!-- css value -->
+  <p [ngStyle]="{'color' : color}"> Color of the text is blue</p> <!-- variable value -->
+
+
+  <ion-button color="tertiary" (click)="setColor('blue')" expand="block" fill="outline" shape="round">
+    Set color
+  </ion-button>
+
+  <ion-button color="danger" (click)="setColor('red')" expand="block" fill="outline" shape="round">
+    Set color
+  </ion-button>
+
+  <ion-button color="success" (click)="setColor('green')" expand="block" fill="outline" shape="round">
+    Set color
+  </ion-button>
+
+</ion-content>

@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>example-ngclass</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <!-- Use ngmodel banana box for reading and writting to the variable-->
+  <ion-range [(ngModel)]="temperature" min="0" max="50" value="1400" pin ticks color="danger">
+    <ion-icon slot="start" size="small" color="danger" name="thermometer"></ion-icon>
+    <ion-icon slot="end" color="danger" name="thermometer"></ion-icon>
+  </ion-range>
+
+  <!-- Use style hot when the condition is done -->
+  <h1 [ngClass]="{
+    'hot': temperature >= 30,
+    'warm': (temperature > 16) && (temperature < 30),
+    'cold': temperature <= 16
+  }">
+    {{ temperature }}
+  </h1>
+
+</ion-content>

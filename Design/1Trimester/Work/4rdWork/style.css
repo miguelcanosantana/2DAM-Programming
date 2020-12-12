@@ -1,0 +1,102 @@
+header {
+    margin: -8px; 
+    margin-top: -21px;
+    background-color: lightblue;
+    padding-bottom: 50px;
+    padding-top: 50px;
+    text-align: center;
+}
+
+.navButtons{
+    margin-top: 21px;
+}
+
+.navButtons > div {
+    color: linen;
+    text-align: center;
+    background-color: rgb(94, 94, 94);
+    float: left;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.mainAside {
+    float: left;
+    margin-top: 20px;
+}
+
+main {
+    padding: 10px;
+    float: left;
+    
+}
+
+main > h1 {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+main > img {
+    width: 100%;
+}
+
+aside {
+    float: right;
+    color: linen;
+    background-color: rgb(94, 94, 94);
+    padding: 30px;
+    padding-bottom: 100%;
+    text-align: center;
+    width: 100%;
+}
+
+footer {
+    height: 200px;
+    margin-top: 1300px;
+    margin-right: auto;
+    color: linen;
+    background-color: rgb(94, 94, 94);
+}
+
+
+/* ____JQuerys____ */
+
+/* Mobile | 600px or more */
+@media screen and (min-width: 600px) {
+}
+
+/* PC | 768px or more */
+@media screen and (min-width: 768px) {
+    .navButtons > div {
+        width: 25%;
+    }
+
+    main {
+        width: 75%;
+    }
+
+    aside {
+        width: 12%;
+        padding-bottom: -500px;
+        
+    }
+}
+
+
+/* PC | 900px or more */
+@media screen and (min-width: 900px) {
+
+    aside {
+        width: 16%;
+    }
+}
+
+/* PC | 1700px or more */
+@media screen and (min-width: 1700px) {
+
+    aside {
+        width: 20%;
+    }
+}

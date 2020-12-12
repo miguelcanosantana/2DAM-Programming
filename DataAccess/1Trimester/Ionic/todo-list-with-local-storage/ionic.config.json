@@ -1,7 +1,0 @@
-{
-  "name": "todo-list-with-local-storage",
-  "integrations": {
-    "capacitor": {}
-  },
-  "type": "angular"
-}
