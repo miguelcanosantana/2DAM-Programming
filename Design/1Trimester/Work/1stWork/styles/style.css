@@ -1,6 +1,17 @@
+body {
+    overflow: hidden;
+    background-color: black;
+}
+
+.grid {
+    position: absolute;
+    background-image: url(../images/pattern.png);
+    background-repeat: repeat;
+}
+
 /*________________Animations________________*/
 .animation {
-    animation: anim 36s linear 0s infinite normal forwards;
+    animation: anim 42s linear 0s infinite normal forwards;
 }
 
 @keyframes anim {
@@ -20,7 +31,7 @@
         transform:scale(1.1,1.1);
     }
 
-    8% {
+    10% {
         transform:scale(1.2,1.2) rotateZ(5deg);
     }
 
@@ -28,7 +39,7 @@
         opacity: 100;
     }
 
-    16.6% {
+    16% {
         opacity: 0;
         transform:scale(1.2,1.2) rotateZ(5deg);
 
@@ -53,25 +64,25 @@
 #img2 {
     background-image: url("../images/img2.jpg");
     opacity: 0;
-    animation-delay: 4s;
+    animation-delay: 7s;
 }
 #img3 {
     background-image: url("../images/img3.jpg");
     opacity: 0;
-    animation-delay: 10s;
+    animation-delay: 14s;
 }
 #img4 {
     background-image: url("../images/img4.jpg");
     opacity: 0;
-    animation-delay: 16s;
+    animation-delay: 21s;
 }
 #img5 {
     background-image: url("../images/img5.jpg");
     opacity: 0;
-    animation-delay: 22s;
+    animation-delay: 28s;
 }
 #img6 {
     background-image: url("../images/img6.jpg");
     opacity: 0;
-    animation-delay: 28s;
+    animation-delay: 35s;
 }
