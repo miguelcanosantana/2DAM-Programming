@@ -1,9 +1,24 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>list</ion-title>
+    <ion-title>Shopping List</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content class="ion-padding">
+
+  <ion-list>
+    
+  <ion-button (click)="addItemFromService()" shape="round">
+    Click me
+  </ion-button>
+
+    <ion-item>
+      <!--Async because it will be retrieved from Fire Base-->
+      <ion-label> {{items | async | json}} </ion-label>
+    </ion-item>
+
+  </ion-list>
+
+  
 
 </ion-content>
