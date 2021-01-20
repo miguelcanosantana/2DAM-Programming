@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tonejs</title>
+    <script type="text/javascript" src="https://unpkg.com/tone@13.8.25/build/Tone.js"></script>
+</head>
+<body>
+
+    <h1>ToneJS Test</h1>
+    <button id="button">Push me!</button>
+    
+</body>
+
+<script type="text/javascript">
+
+    window.onload = function() {
+
+        const sint = new Tone.Synth().toMaster();
+
+        document.getElementById('button').addEventListener('click', function() {
+
+            sint.triggerAttackRelease("A3", "1n");
+
+        });
+
+    }
+
+
+</script>
+
+</html>
