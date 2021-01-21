@@ -12,7 +12,7 @@ export class ListPage implements OnInit {
 
   items: Observable<Item[]>; //[] for getting an array of items
 
-  //Impoprt the service for getting and adding items
+  //Import the service for getting and adding items
   constructor(private itemService: ItemService) {
 
     this.items = itemService.getItems();
