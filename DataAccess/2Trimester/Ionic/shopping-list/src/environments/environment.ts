@@ -4,15 +4,14 @@
 
 export const environment = {
   production: false,
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
   firebaseConfig: {
-    apiKey: "AIzaSyDMKjpXtfd3skbCYmGk1jtHl_Ccgbp_F2M",
-    authDomain: "ionic-shopping-list-5d02a.firebaseapp.com",
-    projectId: "ionic-shopping-list-5d02a",
-    storageBucket: "ionic-shopping-list-5d02a.appspot.com",
-    messagingSenderId: "753996449260",
-    appId: "1:753996449260:web:46992e868888d5bab52cc9",
-    measurementId: "G-DR6K1YC3P9"
+    apiKey: "AIzaSyBUH_dqXIwQy7_MW7QJi4fff1fLAXB-ea8",
+    authDomain: "ionic-shopping-list-3f22e.firebaseapp.com",
+    projectId: "ionic-shopping-list-3f22e",
+    storageBucket: "ionic-shopping-list-3f22e.appspot.com",
+    messagingSenderId: "196113200323",
+    appId: "1:196113200323:web:c29b4efc75e3f117575e76",
+    measurementId: "G-TMBPMTQYYC"
   }
 };
 

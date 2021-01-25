@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { Item } from 'src/app/model/item';
 import { ItemService } from 'src/app/services/item.service';
@@ -10,34 +11,23 @@ import { ItemService } from 'src/app/services/item.service';
 })
 export class ListPage implements OnInit {
 
-  items: Observable<Item[]>; //[] for getting an array of items
+  items: Observable<Item[]>;
 
-  //Import the service for getting and adding items
-  constructor(private itemService: ItemService) {
-
+  constructor(
+    private itemService: ItemService,
+    private router: Router
+  ) {
     this.items = itemService.getItems();
-
-   }
-
+  }
 
   ngOnInit() {
   }
 
-
-  //Create Item and add it passing it to the service
-  addItemFromService() {
-
-    //Item
-    const newItem = {
-      name: 'pipas',
-      imageUrl: 'https://alandalusclub.com/wp-content/uploads/2020/06/PIPAS-GADITANAS-AGUASAL-comprar.jpg',
-      quantity: 10
-    }
-
-    //Pass to the service
-    this.itemService.addItem(newItem);
-
+  addItem() {
+    this.router.navigateByUrl('/create-item');
   }
 
-
+  goEditItem(id: string) {
+    this.router.navigateByUrl('/edit-item/' + id);
+  }
 }

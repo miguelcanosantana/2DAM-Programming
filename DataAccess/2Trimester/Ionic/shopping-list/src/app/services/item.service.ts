@@ -11,40 +11,35 @@ export class ItemService {
 
   constructor(private db: AngularFirestore) { }
 
-
-  //Take and item and try to save it in the FireStore
   public addItem(item: Item): Promise<DocumentReference> {
     return this.db.collection('items').add(item);
   }
 
+  public deleteItemById(id: string): Promise<void> {
+    return this.db.collection('items').doc(id).delete();
+  }
 
-  //Update item knowing it's Id
   public updateItemById(id: string, item: Item): Promise<void> {
     return this.db.collection('items').doc(id).set(item);
   }
 
-
-  //Get item knowing it's Id
   public getItemById(id: string): Observable<Item> {
     return this.db.collection('items').doc<Item>(id).valueChanges();
   }
 
 
-  //Get all elements when a change is made in FireStore, return an Array
+
   public getItems(): Observable<Item[]> {
     return this.db.collection<Item>('items').snapshotChanges()
-               .pipe(
-                 map(
-                   snaps => snaps.map(
-                     snap => <Item> <unknown>{
-                       itemId, snap,: .payload.doc.id
-                     } {
-                     ...snap.payload.doc.data().name //As Item
-                    }
-                   )
-                 )
-               );
-  } 
-
-
+      .pipe(
+        map(
+          snaps => snaps.map(
+            snap => <Item>{
+              itemId: snap.payload.doc.id,
+              ...snap.payload.doc.data()// as Item
+            }
+          )
+        )
+      );
+  }
 }
