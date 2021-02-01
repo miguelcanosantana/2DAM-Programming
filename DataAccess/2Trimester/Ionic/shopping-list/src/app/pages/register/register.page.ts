@@ -12,7 +12,7 @@ export class RegisterPage implements OnInit {
   email: string;
   password: string;
 
-  
+
   constructor(
     private authService: AuthService,
     private router: Router
@@ -26,7 +26,7 @@ export class RegisterPage implements OnInit {
   //Register and redirect
   register() {
     this.authService.createUser(this.email, this.password);
-    this.router.navigateByUrl('/login');
+    this.router.navigateByUrl('/list');
   }
 
 }

@@ -31,4 +31,9 @@ export class AuthService {
   }
 
 
+  public resetPassword(email: string): Promise<void> {
+    return this.afAuth.sendPasswordResetEmail(email);
+  }
+
+
 }
