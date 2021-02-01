@@ -26,4 +26,9 @@ export class AuthService {
   }
 
 
+  public createUser(email: string, password: string):Promise<firebase.default.auth.UserCredential> {
+    return this.afAuth.createUserWithEmailAndPassword(email, password);
+  }
+
+
 }

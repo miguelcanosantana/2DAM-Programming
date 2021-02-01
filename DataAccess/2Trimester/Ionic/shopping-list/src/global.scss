@@ -26,6 +26,11 @@
 @import "~@ionic/angular/css/flex-utils.css";
 
 :root {
+
+    ionic-title {
+      font-size: 2em;
+    }
+
     --ion-background-color:#2c3542; //Custom Background
 
     --ion-color-primary: #0e6286;

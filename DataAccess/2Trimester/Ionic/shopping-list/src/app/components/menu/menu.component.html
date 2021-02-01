@@ -8,23 +8,23 @@
     <ion-list>
 
       <ion-item *ngIf="authService.getCurrentUser() | async" (click)="logout()">
-        <ion-icon name="exit-outline" slot="start"></ion-icon>
-        <ion-label> Logout </ion-label>
+        <ion-icon color="light" name="exit-outline" slot="start"></ion-icon>
+        <ion-label color="light"> Logout </ion-label>
       </ion-item>
 
       <ion-item *ngIf="authService.getCurrentUser() | async">
-        <ion-icon name="person-outline" slot="start"></ion-icon>
-        <ion-label> Profile </ion-label>
+        <ion-icon color="light" name="person-outline" slot="start"></ion-icon>
+        <ion-label color="light"> Profile </ion-label>
       </ion-item>
 
       <ion-item>
-        <ion-icon name="settings-outline" slot="start"></ion-icon>
-        <ion-label> Settings </ion-label>
+        <ion-icon color="light" name="settings-outline" slot="start"></ion-icon>
+        <ion-label color="light"> Settings </ion-label>
       </ion-item>
 
       <ion-item>
-        <ion-icon name="information-circle-outline" slot="start"></ion-icon>
-        <ion-label> About </ion-label>
+        <ion-icon color="light" name="information-circle-outline" slot="start"></ion-icon>
+        <ion-label color="light" > About </ion-label>
       </ion-item>
 
     </ion-list>

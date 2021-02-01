@@ -1,5 +1,11 @@
 <ion-header>
   <ion-toolbar color="primary">
+
+    <ion-buttons slot="end">
+      <ion-menu-button menu="main-menu">
+      </ion-menu-button>
+    </ion-buttons>
+
     <ion-title>Login with your Account</ion-title>
   </ion-toolbar>
 </ion-header>
@@ -72,7 +78,7 @@
         <ion-col class="ion-text-center" size="2"></ion-col>
   
         <ion-col class="ion-text-center" size="4">
-          <ion-button color="secondary" fill="outline" (click)="create()" shape="round">
+          <ion-button color="secondary" fill="outline" (click)="goToRegister()" shape="round">
             Make Account
           </ion-button>
         </ion-col>
@@ -88,6 +94,5 @@
       </ion-row>
     </ion-grid>
 
-  {{ user | json}}
 
 </ion-content>

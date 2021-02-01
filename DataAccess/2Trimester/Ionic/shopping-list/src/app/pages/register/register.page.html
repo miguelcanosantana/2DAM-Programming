@@ -1,0 +1,73 @@
+<ion-header>
+  <ion-toolbar color="primary">
+
+    <ion-buttons slot="end">
+      <ion-menu-button menu="main-menu">
+      </ion-menu-button>
+    </ion-buttons>
+
+    <ion-title>Register new Account</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <br>
+  <br>
+  <br>
+
+  <!-- User Icon -->
+  <ion-grid fixed>
+    <ion-row>
+
+      <ion-col class="ion-text-center" size="12">
+        <img  width="300" height="400" src="https://hogarsi.org/wp-content/plugins/give/assets/dist/images/anonymous-user.svg" alt="">
+      </ion-col>
+
+    </ion-row>
+  </ion-grid>
+
+
+  <!-- Text Fields -->
+  <ion-grid fixed>
+    <ion-row>
+
+      <ion-col size="2"></ion-col>
+
+      <ion-col size="4">
+        <ion-item color="primary">
+          <ion-label color="secondary" position="floating">Email</ion-label>
+          <ion-input color="secondary" [(ngModel)]="email" ></ion-input>
+        </ion-item>
+      </ion-col>
+
+      <ion-col size="4">
+        <ion-item color="primary">
+          <ion-label color="secondary" position="floating">Password</ion-label>
+          <ion-input color="secondary" type="password" [(ngModel)]="password" (keyup.enter)="register()"></ion-input>
+        </ion-item>
+      </ion-col>
+
+      <ion-col size="2"></ion-col>
+
+    </ion-row>
+  </ion-grid>
+
+
+  <!-- Register -->
+  <ion-grid fixed>
+    <ion-row>
+
+      <ion-col class="ion-text-center" size="4"></ion-col>
+      
+      <ion-col class="ion-text-center" size="4">
+        <ion-button color="tertiary" (click)="register()" shape="round">
+          Finish Register
+        </ion-button>
+      </ion-col>
+
+      <ion-col class="ion-text-center" size="4"></ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>
