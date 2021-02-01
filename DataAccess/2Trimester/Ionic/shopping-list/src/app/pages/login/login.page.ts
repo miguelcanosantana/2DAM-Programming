@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { User } from 'firebase';
+import { Router } from '@angular/router';
+import { AlertController } from '@ionic/angular';
 import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
@@ -9,19 +10,44 @@ import { AuthService } from 'src/app/services/auth.service';
 })
 export class LoginPage implements OnInit {
 
-  user: User;
+  email: string;
+  password: string;
 
-  constructor(private authService: AuthService) { }
+  constructor (
+    private authService: AuthService,
+    private router: Router,
+    public alertController: AlertController
+  ) { }
 
   ngOnInit() {
   }
 
+
+  //Try to login and redirect to List
   async login() {
-    await this.authService.login("tideclima@gmail.com", "patatilla");
-    console.log("logged");
-    this.authService.getCurrentUser().subscribe(
-      data => this.user = data
-    );
+
+    try {
+
+      await this.authService.login(this.email, this.password);
+      console.log("logged");
+      //this.authService.getCurrentUser().subscribe( data => this.user = data );
+      this.router.navigateByUrl('/list');
+    } catch (error) {
+      console.log(error);
+      this.presentAlert(error.message);
+    }
+  }
+
+
+  //Alert when login fails
+  async presentAlert(error) {
+    const alert = await this.alertController.create({
+      header: 'Failed Login',
+      message: error,
+      buttons: ['Ok']
+    });
+
+    await alert.present();
   }
 
 }

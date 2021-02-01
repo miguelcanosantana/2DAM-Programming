@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { Item } from 'src/app/model/item';
+import { AuthService } from 'src/app/services/auth.service';
 import { ItemService } from 'src/app/services/item.service';
 
 @Component({
@@ -15,6 +16,7 @@ export class ListPage implements OnInit {
 
   constructor(
     private itemService: ItemService,
+    public authService: AuthService,
     private router: Router
   ) {
     this.items = itemService.getItems();
@@ -23,11 +25,20 @@ export class ListPage implements OnInit {
   ngOnInit() {
   }
 
+
   addItem() {
     this.router.navigateByUrl('/create-item');
   }
 
+
   goEditItem(id: string) {
     this.router.navigateByUrl('/edit-item/' + id);
   }
+
+  
+  logout() {
+    this.authService.logout();
+    this.router.navigateByUrl('/login');
+  }
+
 }

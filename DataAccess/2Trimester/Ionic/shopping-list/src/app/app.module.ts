@@ -11,10 +11,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { environment } from 'src/environments/environment';
-import {AngularFireAuthModule} from '@angular/fire/auth'
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { AngularFireAuthGuard } from '@angular/fire/auth-guard'
+import { MenuComponent } from './components/menu/menu.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, MenuComponent],
   entryComponents: [],
   imports: [
     BrowserModule,
@@ -27,7 +29,8 @@ import {AngularFireAuthModule} from '@angular/fire/auth'
   providers: [
     StatusBar,
     SplashScreen,
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+    AngularFireAuthGuard
   ],
   bootstrap: [AppComponent]
 })

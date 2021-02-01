@@ -1,14 +1,92 @@
 <ion-header>
   <ion-toolbar color="primary">
-    <ion-title>login</ion-title>
+    <ion-title>Login with your Account</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content class="ion-padding">
 
-  <ion-button (click)="login()" expand="block" fill="clear" shape="round">
-    Click me
-  </ion-button>
+  <br>
+  <br>
+  <br>
+
+  <!-- User Icon -->
+  <ion-grid fixed>
+    <ion-row>
+
+      <ion-col class="ion-text-center" size="12">
+        <img  width="300" height="400" src="https://hogarsi.org/wp-content/plugins/give/assets/dist/images/anonymous-user.svg" alt="">
+      </ion-col>
+
+    </ion-row>
+  </ion-grid>
+  
+  
+  <!-- Text Fields -->
+  <ion-grid fixed>
+    <ion-row>
+
+      <ion-col size="2"></ion-col>
+
+      <ion-col size="4">
+        <ion-item color="primary">
+          <ion-label color="secondary" position="floating">Email</ion-label>
+          <ion-input color="secondary" [(ngModel)]="email" ></ion-input>
+        </ion-item>
+      </ion-col>
+
+      <ion-col size="4">
+        <ion-item color="primary">
+          <ion-label color="secondary" position="floating">Password</ion-label>
+          <ion-input color="secondary" type="password" [(ngModel)]="password" (keyup.enter)="login()"></ion-input>
+        </ion-item>
+      </ion-col>
+
+      <ion-col size="2"></ion-col>
+
+    </ion-row>
+  </ion-grid>
+
+
+    <!-- Buttons 1 -->
+    <ion-grid fixed>
+      <ion-row>
+
+        <ion-col class="ion-text-center" size="4"></ion-col>
+        
+        <ion-col class="ion-text-center" size="4">
+          <ion-button color="tertiary" (click)="login()" shape="round">
+            User Login
+          </ion-button>
+        </ion-col>
+
+        <ion-col class="ion-text-center" size="4"></ion-col>
+      </ion-row>
+    </ion-grid>
+
+
+    <!-- Buttons 2 -->
+    <ion-grid fixed>
+      <ion-row>
+
+        <ion-col class="ion-text-center" size="2"></ion-col>
+  
+        <ion-col class="ion-text-center" size="4">
+          <ion-button color="secondary" fill="outline" (click)="create()" shape="round">
+            Make Account
+          </ion-button>
+        </ion-col>
+        
+        <ion-col class="ion-text-center" size="4">
+          <ion-button color="danger" fill="outline" (click)="reset()" shape="round">
+            Reset Password
+          </ion-button>
+        </ion-col>
+
+        <ion-col class="ion-text-center" size="2"></ion-col>
+  
+      </ion-row>
+    </ion-grid>
 
   {{ user | json}}
 
