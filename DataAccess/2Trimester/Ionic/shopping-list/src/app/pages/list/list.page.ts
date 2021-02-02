@@ -19,7 +19,12 @@ export class ListPage implements OnInit {
     public authService: AuthService,
     private router: Router
   ) {
-    this.items = itemService.getItems();
+
+    //Get list data when logged
+    this.authService.getCurrentUser().subscribe(
+      () => this.items = itemService.getItems()
+    );
+    
   }
 
   ngOnInit() {
@@ -35,10 +40,5 @@ export class ListPage implements OnInit {
     this.router.navigateByUrl('/edit-item/' + id);
   }
 
-  
-  logout() {
-    this.authService.logout();
-    this.router.navigateByUrl('/login');
-  }
 
 }
