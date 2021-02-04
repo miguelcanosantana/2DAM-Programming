@@ -1,20 +1,19 @@
 //Paint
 function start1() {
 
-    var element = document.getElementById('canvas1'); 
+    var element = document.getElementById('canvas'); 
     canvas = element.getContext('2d');
 
-    canvas.strokeRect(0,0,500,400);
+    canvas.strokeRect(0,0,element.width,element.height);
 
-    var image = new Image(); 
-    image.src = "image.jpg";
-
-    image.addEventListener("mousemove", paint, false);
+    window.addEventListener("mousemove", paint, false);
 
 
     function paint(e) {
-        var xMouse = e.clientX;
-        var yMouse = e.clientY -80;
+        var xMouse = e.clientX - 10;
+        var yMouse = e.clientY - 80;
+
+        console.log(xMouse, yMouse)
 
         canvas.beginPath();
 

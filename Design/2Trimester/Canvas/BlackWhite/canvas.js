@@ -1,4 +1,4 @@
-//Grey Scale
+//Black and White
 function start1() {
 
     var element = document.getElementById('canvas1'); 
@@ -10,12 +10,12 @@ function start1() {
     image.addEventListener("load", function() {
 
         canvas.drawImage(image,0,0); 
-        var info = canvas.getImageData(0,0,800,800); 
+        var info = canvas.getImageData(0,0,element.width,element.height); 
         var pos;
 
-        for (x = 0; x <= 800; x++){ 
+        for (x = 0; x <= element.height; x++){ 
 
-            for (y = 0; y <= 800; y++){ 
+            for (y = 0; y <= element.height; y++){ 
 
                 pos = (info.width * 4 * y) + (x * 4);
 
