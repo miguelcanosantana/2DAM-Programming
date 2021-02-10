@@ -1,0 +1,14 @@
+{
+  "appId": "com.iescampanillas.photorecord",
+  "appName": "Photographic Record",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www",
+  "linuxAndroidStudioPath": "/var/lib/flatpak/app/com.google.AndroidStudio/x86_64/stable/da7b422b67373efebf5dca72d6edd18bd557a372d1b5321b479963c62224248d/files/extra/android-studio/bin/studio.sh",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0
+    }
+  },
+  "cordova": {}    
+}
