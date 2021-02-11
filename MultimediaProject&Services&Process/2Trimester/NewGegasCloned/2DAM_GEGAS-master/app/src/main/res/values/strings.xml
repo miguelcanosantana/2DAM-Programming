@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">gegas</string>
+
+    <!-- Hints -->
+    <string name="hint_email">Email</string>
+    <string name="hint_password">Contraseña</string>
+    <string name="hint_nombre">Nombre</string>
+    <string name="hint_apellidos">Apellidos</string>
+    <string name="hint_fecha">Fecha</string>
+    <string name="hint_cantidad">Cantidad</string>
+    <string name="hint_concepto">Concepto</string>
+
+    <!-- Etiquetas -->
+    <string name="lab_login">Entrar</string>
+    <string name="lab_registro">Registrar</string>
+    <string name="lab_cancelar">Cancelar</string>
+    <string name="lab_guardar">Guardar</string>
+    <string name="lab_aniadir">Añadir Movimiento</string>
+
+    <!-- Cabeceras -->
+    <string name="tit_aniadir">Añadir nuevo Movimiento</string>
+
+    <!-- Cadenas de texto -->
+    <string name="app_info">Desarrollado por Antonio J.Sánchez</string>
+
+    <!-- Mensajes -->
+    <string name="msg_vacio">El email y la contraseña no pueden estar vacíos.</string>
+    <string name="msg_registro_ok">El usuario se ha registrado correctamente.</string>
+    <string name="msg_registro_error">Se ha producido un error en el proceso de registro.</string>
+    <string name="msg_login">El email o contraseña incorrectos.</string>
+    <string name="item_concepto">%1$s \n %2$s</string>
+
+    <string name="msg_obligatorio">Los campos son obligatorios.</string>
+
+</resources>

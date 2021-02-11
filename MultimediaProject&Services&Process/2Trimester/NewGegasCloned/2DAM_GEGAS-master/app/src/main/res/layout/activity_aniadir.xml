@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:background="@color/app_background_color"
+    tools:context=".LoginActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/gegasTitulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="120dp"
+            android:text="@string/tit_aniadir"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Fecha -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/fechaLayout"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_fecha"
+            android:layout_marginTop="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/gegasTitulo">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/fechaInput"
+                android:inputType="date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Cantidad -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/cantidadLayout"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_cantidad"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fechaLayout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/cantidadInput"
+                android:inputType="numberSigned"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Concepto -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/conceptoLayout"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_concepto"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cantidadLayout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/conceptoInput"
+                android:inputType="textMultiLine"
+                android:lines="4"
+                android:gravity="top|left"
+                android:scrollbars="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Botón de guardar -->
+        <Button
+            android:id="@+id/btnGuardar"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="@string/lab_guardar"
+            android:layout_marginTop="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/conceptoLayout"/>
+
+        <!-- Botón de cancelar -->
+        <Button
+            android:id="@+id/btnCancelar"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="@string/lab_cancelar"
+            android:layout_marginTop="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btnGuardar"
+            style="?attr/materialButtonOutlinedStyle" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
