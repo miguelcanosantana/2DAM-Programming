@@ -31,5 +31,10 @@
     <string name="item_concepto">%1$s \n %2$s</string>
 
     <string name="msg_obligatorio">Los campos son obligatorios.</string>
+    <string name="menu_salir">Salir</string>
+    <string name="exit_texto">Salir de la App?</string>
+    <string name="boton_Salir">Salir</string>
+    <string name="boton_Volver">No</string>
+    <string name="exit_mas_texto">Desea cerrar su sesión de la app?</string>
 
 </resources>

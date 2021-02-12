@@ -23,6 +23,9 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -35,6 +38,7 @@ import com.ajsb.gegas.recycler.MovimientoAdapter;
 import com.ajsb.gegas.recycler.onMovimientoClickListener;
 import com.google.android.gms.common.util.ArrayUtils;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.internal.InternalTokenProvider;
 import com.google.firebase.storage.FirebaseStorage;
@@ -129,6 +133,43 @@ public class MainActivity extends AppCompatActivity
     }
 
     /**
+     *
+     * @param menu
+     * @return
+     */
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu)
+    {
+        MenuInflater inflador = getMenuInflater();
+        inflador.inflate(R.menu.app_menu, menu);
+        return super.onCreateOptionsMenu(menu) ;
+    }
+
+    /**
+     *
+     * @param item
+     * @return
+     */
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case 0:
+                exitApp();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
+
+    private void exitApp() {
+        MaterialAlertDialogBuilder dialogBuilder;
+        dialogBuilder = new MaterialAlertDialogBuilder(this);
+        dialogBuilder.setTitle(getString(R.string.exit_texto));
+        dialogBuilder.setMessage(getString(R.string.exit_mas_texto));
+    }
+
+    /**
      * @return
      */
     private boolean checkPermission()
@@ -214,7 +255,7 @@ public class MainActivity extends AppCompatActivity
     @Override
     public void onBackPressed()
     {
-        logout();
+        exitApp();
     }
 
     /**

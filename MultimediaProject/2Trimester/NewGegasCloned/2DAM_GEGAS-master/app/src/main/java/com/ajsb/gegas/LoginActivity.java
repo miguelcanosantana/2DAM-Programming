@@ -12,12 +12,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
 import com.ajsb.gegas.database.Database;
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.auth.AuthResult;
@@ -129,6 +131,15 @@ public class LoginActivity extends AppCompatActivity
                   // Acceder a la pantalla principal de la aplicación
                   Intent i = new Intent(this, MainActivity.class) ;
                   startActivity(i) ;
-              }) ;
+              })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Log.e("error", e.getMessage());
+                    }
+                })
+
+
+        ;
     }
 }

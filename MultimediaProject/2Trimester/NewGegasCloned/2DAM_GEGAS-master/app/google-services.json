@@ -14,6 +14,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "133617034994-u7q1v1p2b2bhlq6pust9ggv4hv9rtpgl.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ajsb.gegas",
+            "certificate_hash": "ac78e9203571c99d3a30c637b771da0796ccd6d3"
+          }
+        },
+        {
           "client_id": "133617034994-22hv6s0hf25hfm86qsa7nuvpsl7mbvt0.apps.googleusercontent.com",
           "client_type": 3
         }
