@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vivus@latest/dist/vivus.min.js"></script>
+    <title>Vivus</title>
+</head>
+<body>
+    
+    <div id="canvas"></div>
+
+    <script>
+
+        new Vivus(
+            'canvas',
+            {
+                type: 'delayed',
+                duration: 1000,
+                animTimingFunction: Vivus.EASE_OUT,
+                file: 'dibujo.svg'
+            },
+        );
+
+
+
+
+    </script>
+
+</body>
+</html>

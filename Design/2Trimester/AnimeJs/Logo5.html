@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Cover </title>
+    <script src="anime.min.js"></script>
+</head>
+<body style="margin: 0;">
+
+
+<!-- Svg Image -->
+<svg
+    id="logo"
+    width="300px"
+    height="300px"
+    viewBox="0 0 210 297"
+    version="1.1"
+    id="svg8"
+    inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)"
+    sodipodi:docname="Underground.svg">
+    <defs
+        id="defs2">
+        <linearGradient
+        inkscape:collect="always"
+        id="linearGradient1857">
+        <stop
+            style="stop-color:#0049ff;stop-opacity:1;"
+            offset="0"
+            id="stop1853" />
+        <stop
+            style="stop-color:#0049ff;stop-opacity:0;"
+            offset="1"
+            id="stop1855" />
+        </linearGradient>
+        <linearGradient
+        inkscape:collect="always"
+        id="linearGradient1849">
+        <stop
+            style="stop-color:#0049ff;stop-opacity:1"
+            offset="0"
+            id="stop1845" />
+        <stop
+            style="stop-color:#ff00c8;stop-opacity:0"
+            offset="1"
+            id="stop1847" />
+        </linearGradient>
+        <linearGradient
+        inkscape:collect="always"
+        xlink:href="#linearGradient1849"
+        id="linearGradient1851"
+        x1="47.49646"
+        y1="115.61852"
+        x2="130.37595"
+        y2="39.18557"
+        gradientUnits="userSpaceOnUse" />
+        <linearGradient
+        inkscape:collect="always"
+        xlink:href="#linearGradient1857"
+        id="linearGradient1859"
+        x1="47.49646"
+        y1="115.61852"
+        x2="130.37594"
+        y2="115.61852"
+        gradientUnits="userSpaceOnUse" />
+    </defs>
+    <g
+        inkscape:label="Capa 1"
+        inkscape:groupmode="layer"
+        id="layer1"
+        style="display:inline;opacity:1">
+        <circle
+        style="fill:#d70056;fill-opacity:1;fill-rule:evenodd;stroke-width:0.370731"
+        id="path2040"
+        cx="104.67995"
+        cy="148.39455"
+        r="93.216454" />
+        <circle
+        style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke-width:0.242347"
+        id="path2042"
+        cx="104.67995"
+        cy="148.39455"
+        r="65.609184" />
+        <rect id="rectangle"
+        style="fill:#1c35a7;fill-opacity:1;fill-rule:evenodd;stroke-width:0.282439"
+        id="rect2046"
+        width="201.9286"
+        height="35.305443"
+        x="3.7156434"
+        y="130.74182"
+        ry="6.1849389"
+        rx="4.711894" />
+        <text
+        id="texto"
+        xml:space="preserve"
+        style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;white-space:pre;inline-size:94.2969;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+        x="24.705116"
+        y="149.65303"
+        id="text2050"
+        transform="matrix(1.7840074,0,0,1.7283581,-23.333861,-103.60104)"><tspan
+            x="24.705116"
+            y="149.65303"><tspan
+            style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';fill:#ffffff;fill-opacity:1;stroke-width:0.264583">UNDERGROUND</tspan></tspan></text>
+    </g>
+    <g
+        inkscape:groupmode="layer"
+        id="layer2"
+        inkscape:label="Capa 2"
+        style="display:inline;" />
+</svg>
+
+
+    
+
+    <script>
+
+
+        var tl = anime.timeline({
+            easing: 'easeOutExpo',
+            autoplay: true,
+            duration: 750
+        });
+
+        tl.add({
+            targets: '#logo',
+            translateY: [-100,0],
+            opacity: [0,1],
+            elasticity: 600,
+            duration: 600
+
+        }).add({
+            targets: '#rectangle',
+            translateY: [100,0],
+            opacity: [0,1],
+            elasticity: 600,
+            duration: 600
+
+        }, '-=500').add({
+            targets: '#texto',
+            translateY: [-100,0],
+            opacity: [0,1],
+            elasticity: 600,
+            duration: 600
+        }, '-=700')
+
+
+
+
+
+
+
+
+
+
+
+
+
+        /*
+        var animation = anime({
+            targets: '#polygon',
+            
+            points: [
+                { value: [
+                '0,0 0,1080 1920,1080 1920,0',
+                '0,0 0,1080 1920,1080 1920,0']
+                },
+                { value: '0,0 0,1080 1920,1080 600,0' },
+                { value: '0,0 0,1080 1920,1080 600,800' },
+            ],
+
+
+            duration: 3000,
+            easing: 'easeOutCubic(1, .8)',
+            autoplay: false
+        });
+
+        var animation2 = anime({
+            targets: '#text',
+            points: [
+                { value: [
+                '0,0 0,1080 1920,1080 1920,0',
+                '0,0 0,1080 1920,1080 1920,0']
+                },
+                { value: '0,0 0,1080 1920,1080 600,0' },
+                { value: '0,0 0,1080 1920,1080 600,800' },
+            ],
+
+            duration: 3000,
+            easing: 'easeOutCubic(1, .8)',
+            autoplay: false
+        });
+
+        document.getElementById('polygon').onclick = animation.play; */
+        
+    </script>
+
+</body>
+</html>

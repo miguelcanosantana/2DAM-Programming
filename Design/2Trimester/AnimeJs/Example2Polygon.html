@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="anime/anime.js"></script>
+</head>
+<body>
+
+    <svg id="lienzo" width="800" height="500">
+        <polygon id="polygon" points="220,10 300,210 220,250 145,210" style="fill:rgb(0, 132, 255)" />
+        <polygon id="polygon" points="220,10 300,210 220,250 145,210" style="fill:none; stroke:black; stroke-width: 5px;" />
+    </svg>
+
+
+    <script>
+        anime({
+            targets: '#polygon',
+            points: "220,60 300,210 220,250 145,210"
+        });
+    </script>
+    
+</body>
+</html>

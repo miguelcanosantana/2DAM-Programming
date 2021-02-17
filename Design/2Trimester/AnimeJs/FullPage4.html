@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Cover </title>
+    <script src="anime.min.js"></script>
+</head>
+<body style="margin: 0;">
+
+    <p id="text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+    <svg width="100%" height="calc(100vh - 4px)" id="lienzo">
+        <polygon id="polygon" points="0,0 0,1080 1920,1080 1920,0" style="fill:rgb(0, 132, 255)" />
+    </svg>
+
+    
+
+    <script>
+        var animation = anime({
+            targets: '#polygon',
+            points: [
+                { value: [
+                '0,0 0,1080 1920,1080 1920,0',
+                '0,0 0,1080 1920,1080 1920,0']
+                },
+                { value: '0,0 0,1080 1920,1080 600,0' },
+                { value: '0,0 0,1080 1920,1080 600,800' },
+            ],
+
+            duration: 3000,
+            easing: 'easeOutCubic(1, .8)',
+            autoplay: false
+        });
+
+        var animation2 = anime({
+            targets: '#text',
+            points: [
+                { value: [
+                '0,0 0,1080 1920,1080 1920,0',
+                '0,0 0,1080 1920,1080 1920,0']
+                },
+                { value: '0,0 0,1080 1920,1080 600,0' },
+                { value: '0,0 0,1080 1920,1080 600,800' },
+            ],
+
+            duration: 3000,
+            easing: 'easeOutCubic(1, .8)',
+            autoplay: false
+        });
+
+        document.getElementById('polygon').onclick = animation.play;
+        
+    </script>
+
+    <style>
+        #text {
+            margin-left: 500px;
+            position: absolute;
+            font-size: 50px;
+        }
+    </style>
+
+</body>
+</html>

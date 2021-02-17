@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snapsvg</title>
+    <script src="snap/dist/snap.svg.js"></script>
+</head>
+<body>
+
+    <svg id="canvas" width="600" height="600"></svg>
+
+    <script>
+
+        window.onload = function() {
+            var canvas = Snap("#canvas");
+
+            Snap.load("dibujo.svg", function(f) {
+
+                icon = f.select("#icon");
+                bigRect = f.select("#bigRect");
+                smallRect = f.select("#smallRect");
+
+                icon.hover(function() {
+                        smallRect.animate({y: 90}, 150);
+                        smallRect.animate({transform: 'rotate(-36 60 125)'}, 150, mina.ease);
+                        icon.animate({transform: 'rotate(-10 60 125)'}, 150, mina.ease);
+                    },
+                    
+                        function() {
+                        smallRect.animate({y: 114}, 500, mina.elastic);
+                        smallRect.animate({transform: 'rotate(0 0 0)'}, 100, mina.ease);
+                        icon.animate({transform: 'rotate(0 0 0)'}, 100, mina.ease); 
+                        }
+                );
+
+                canvas.append(icon);
+
+            });
+
+
+        }
+
+    </script>
+
+    
+    
+</body>
+</html>

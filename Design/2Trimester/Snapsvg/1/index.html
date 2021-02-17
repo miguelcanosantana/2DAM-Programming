@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snapsvg</title>
+    <script src="snap/dist/snap.svg.js"></script>
+</head>
+<body>
+
+    <svg id="canvas" width="600" height="600"></svg>
+
+    <script>
+
+        window.onload = function() {
+            var canvas = Snap("#canvas");
+
+            //Circle 1
+            var circle = canvas.circle(150, 150, 90);
+
+            circle.attr({
+                fill: "#fc0",
+                stroke: "#000",
+                strokeWidth: 2, // CamelCase...
+                "fill-opacity": 0.5, // or dash-separated names
+                width: "*=2" // prefixed values
+            });
+
+            //Circle 2
+            var circle2 = canvas.circle(100, 150, 40);
+
+            //Group
+            var group = canvas.group(circle2, canvas.circle(200,150,40));
+
+            group.attr({
+                fill: "#0c0",
+                stroke: "#000",
+                strokeWidth: 4
+            });
+
+
+        }
+
+    </script>
+    
+</body>
+</html>

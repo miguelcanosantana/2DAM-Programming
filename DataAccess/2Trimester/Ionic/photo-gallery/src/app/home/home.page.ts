@@ -12,7 +12,7 @@ const { Camera } = Plugins;
 })
 export class HomePage {
 
-  photoPath: SafeResourceUrl;
+  photoPaths: SafeResourceUrl[] = []; //Array of photo paths
 
   constructor(private sanitizer: DomSanitizer) {}
 
@@ -28,11 +28,17 @@ export class HomePage {
     });
 
     //If image exists, take image.webPath
-    this.photoPath = this.sanitizer.bypassSecurityTrustResourceUrl(image && (image.webPath));
-
-    //var imageUrl = image.webPath;
-    //imageElement.src = imageUrl;
+    const path = this.sanitizer.bypassSecurityTrustResourceUrl(image && (image.webPath));
+    this.photoPaths.unshift(path); //Unshift adds the element at the start instead the end
   }
+
+
+  //Remove Photo (Can also be done with index and position)
+  removePhoto(path: SafeResourceUrl) {
+    const i = this.photoPaths.indexOf(path);
+    this.photoPaths.splice(i,1); //Delete on i pos 1 element
+  }
+
 }
 
 

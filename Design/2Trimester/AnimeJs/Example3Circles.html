@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+​
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="anime.min.js"></script>
+    <title>Document</title>
+</head>
+​
+<body>
+​
+​
+    <svg id="lienzo2" width="800" height="400">
+​
+        <circle id="circulo1" cx="70" cy="175" r="40" fill="#999"></circle>
+        <circle id="circulo2" cx="70" cy="175" r="20" fill="#6ab150"></circle>
+​
+    </svg>
+​
+    <script>
+        
+        var animation = anime({
+            targets: '#circulo2',
+            translateX: [
+                { value: 250, duration: 1000, delay: 500 },
+                { value: 0, duration: 1000, delay: 500 }
+            ],
+            scaleX: [
+                { value: 4, duration: 100, delay: 500, easing: 'easeOutExpo' },
+                { value: 1, duration: 900 },
+                { value: 4, duration: 100, delay: 500, easing: 'easeOutExpo' },
+                { value: 1, duration: 900 }
+            ],
+            easing: 'easeOutElastic(1, .8)',
+            loop: true
+        });
+        document.getElementById('circulo2').onclick = animation.play;
+        document.getElementById('circulo1').onclick = animation.pause;
+    </script>
+​
+</body>
+​

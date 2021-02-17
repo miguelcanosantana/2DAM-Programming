@@ -89,10 +89,49 @@
     
     <!-- Animate -->
     <svg width="250" height="150">
-        <rect x="-80" y="10" height="80" width="100" stroke="#006600" stroke-width="5" fill="#6ab150" fill-opacity="0.5">
-            <animate id="anim1" begin="click; anim2.end" attributeName="x" attributeType="XML" from="-220" to="0" dur="0.6s" repeatCount="1" fill="freeze"/>
-            <animate id="anim2" begin="anim1.end" attributeName="x" attributeType="XML" from="0" to="-220" dur="0.6s" repeatCount="1" fill="freeze"/>
+        <rect x="10" y="10" height="80" width="100" stroke="#006600" stroke-width="5" fill="#6ab150" fill-opacity="0.5">
+            <animate id="anim1" begin="click; anim2.end" attributeName="x" attributeType="XML" from="40" to="10" dur="0.6s" repeatCount="1" fill="freeze"/>
+            <animate id="anim2" begin="anim1.end" attributeName="x" attributeType="XML" from="10" to="40" dur="0.6s" repeatCount="1" fill="freeze"/>
         </rect>
+    </svg>
+
+    <!-- Clock -->
+    <svg width="500" height="500">
+        <circle cx="150" cy="100" r="90" stroke="black" stroke-width="3" fill="white" />
+        <line x1="150" y1="100" x2="150" y2="20" stroke="red" stroke-width="3">
+            <animateTransform
+            attributeType="XML"
+            attributeName="transform"
+            type="rotate"
+            from="0 150 100"
+            to="360 150 100"
+            dur="60s"
+            repeatCount="indefinite">
+            </animateTransform>
+        </line>
+        <line x1="150" y1="100" x2="150" y2="40" stroke="blue" stroke-width="3">
+            <animateTransform
+            attributeType="XML"
+            attributeName="transform"
+            type="rotate"
+            from="0 150 100"
+            to="360 150 100"
+            dur="3600s"
+            repeatCount="indefinite">
+            </animateTransform>
+        </line>
+        <line x1="150" y1="100" x2="150" y2="60" stroke="black" stroke-width="3">
+            <animateTransform
+            attributeType="XML"
+            attributeName="transform"
+            type="rotate"
+            from="0 150 100"
+            to="360 150 100"
+            dur="43200s"
+            repeatCount="indefinite">
+            </animateTransform>
+        </line>
+        <circle cx="150" cy="100" r="8" stroke="black" stroke-width="3" fill="white" />
     </svg>
 
 

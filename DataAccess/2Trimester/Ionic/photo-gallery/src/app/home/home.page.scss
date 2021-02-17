@@ -25,3 +25,10 @@
 #container a {
   text-decoration: none;
 }
+
+.image-item {
+  object-fit: cover; //Cut what is left
+  width: 40vw;
+  height: 40vw;
+  padding-bottom: 0.4em;
+}
