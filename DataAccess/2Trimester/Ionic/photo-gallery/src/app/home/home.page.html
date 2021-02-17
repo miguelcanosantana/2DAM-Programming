@@ -8,17 +8,17 @@
 
 <ion-content [fullscreen]="true">
 
-  <p *ngIf="photoPaths.length === 0" class="ion-padding">
+  <p *ngIf="photoService.getPhotos().length === 0" class="ion-padding">
     Your gallery is empty. Try to make some photos.
   </p>
 
 
   <ion-list lines="none">
-    <ion-item-sliding *ngFor="let path of photoPaths">
+    <ion-item-sliding *ngFor="let path of photoService.getPhotos()">
 
         <ion-item>
           <!-- [] are used because will reflect value from TS -->
-          <img class="image-item" *ngIf="photoPaths.length > 0" [src]="path">
+          <img class="image-item" *ngIf="photoService.getPhotos().length > 0" [src]="path">
         </ion-item>
 
         <ion-item-options side="start">
