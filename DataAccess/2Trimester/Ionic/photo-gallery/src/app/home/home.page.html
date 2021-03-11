@@ -14,13 +14,17 @@
 
 
   <ion-list lines="none">
-    <ion-item-sliding *ngFor="let path of photoService.getPhotos()">
+    <ion-item-sliding *ngFor="let record of photoService.getPhotos()">
 
         <ion-item>
           <!-- [] are used because will reflect value from TS -->
-          <img class="image-item" *ngIf="photoService.getPhotos().length > 0" [src]="path">
+          <img class="image-item" *ngIf="photoService.getPhotos().length > 0" [src]="record.path">
+          <ion-label> 
+            <h1 class="ion-text-center"> {{record.date | date:'dd/MM/yyyy'}} </h1>
+            <h1 class="ion-text-center"> {{record.date | date:'HH:mm/ss'}} </h1>
+          </ion-label>
         </ion-item>
-
+        
         <ion-item-options side="start">
           <ion-item-option color="danger" (click)="removePhoto(path)">
             <ion-icon slot="icon-only" name="trash"></ion-icon>
